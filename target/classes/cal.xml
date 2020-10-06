@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  
+		CalcImpl calc = new CalcImpl(4);
+		calc.setSu1(9);  // 부모가 자식과 동일한 이름의 메서드를 가지고 있어야 한다
+		
+-->
+<!-- 
+		<bean id="calc" class="sample4.CalcImpl">
+			<constructor-arg>
+				<value>3</value>
+			</constructor-arg>
+			
+			<property name="su1">
+				<value>9</value>
+			</property>	
+		</bean>
+-->		
+<!-- 
+		<bean id="calc" class="sample4.CalcImpl">
+			<constructor-arg value="4"/>
+							
+			<property name="su1" value="9"/>	
+		</bean>
+ -->
+ 	<bean id="calc" class="sample4.CalcImpl" c:su2="5" p:su1="10"/>	 	 
+
+
+
+</beans>
